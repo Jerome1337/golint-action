@@ -17,7 +17,7 @@ The golint output if the command fail.
 ## Example usage
 
 ```yaml
-uses: Jerome1337/go-action/lint@v1.0.0
+uses: Jerome1337/golint-action@v1.0.0
 with:
   golint-path: './src/...'
 ````
