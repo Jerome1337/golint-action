@@ -1,0 +1,19 @@
+name: 'Go-linter'
+author: 'Jérôme Pogeant'
+description: 'Lint your code using golint'
+inputs:
+  golint-path:
+    description: 'Path used by golint command'
+    required: false
+    default: './...'
+outputs:
+  golint-output:
+    description: 'The golint output if the command fail'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.golint-path }}
+branding:
+  icon: 'check-circle'
+  color: 'green'
