@@ -4,7 +4,7 @@ This action execute golint command and return the output if the command fail.
 
 ## Inputs
 
-### `golint-path`
+`golint-path`
 
 Path where your Go files are.
 This path will be used by golint command to check code of this files.
@@ -16,11 +16,11 @@ remove it if you only want to check files of the given directory.
 
 ## Outputs
 
-### `golint-output`
+`golint-output`
 
 The golint output if the command fail.
 
-For example:
+For Example:
 
 ```bash
 Found 6 lint suggestions; failing.
@@ -35,7 +35,7 @@ models/Protection.go:3:6: exported type Protection should have comment or be une
 ## Example Usage
 
 ```yaml
-uses: Jerome1337/golint-action@v1.0.1
+uses: Jerome1337/golint-action@v1.0.2
 with:
   golint-path: './src/...'
 ````
