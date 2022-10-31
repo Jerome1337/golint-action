@@ -10,4 +10,8 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
-echo "::set-output name=golint-output::Golint step succeed"
+if [ -z "${GITHUB_OUTPUT}" ]; then
+  echo "::set-output name=golint-output::Golint step succeed"
+else
+  echo "golint-output=Golint step succeed" >> "${GITHUB_OUTPUT}"
+fi
